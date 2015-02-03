@@ -1,0 +1,94 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
+/* Config */
+$white: #FFF;
+$text-color: #24323A;
+$text-color-l: #727272;
+$grey-xl: #F5F5F5;
+$grey-l: #EFEFEF;
+$grey: #D5D5D5;
+$grey-dark: #999999;
+$blue-l: #79BCC9;
+$blue-d: #21405A;
+
+/* helper */
+
+
+/* style */
+body,
+.panel {
+    background: $grey-xl;
+    color: $text-color;
+}
+
+.component{
+    background: $grey-l;
+    margin: 3em 0;
+    padding: 1em;
+    color: $text-color-l;
+
+    p {
+        font-size: 1em;
+    }
+    label {
+        font-size: 0.7em;
+    }
+    .timeFrame {
+      padding-top: 160px;
+    }
+    .slider {
+        .rangeLabel {
+            font-size: 0.9em;
+            text-align: center;
+        }
+        padding-top: 200px;
+    }
+
+    input, span {
+        display: inline-block;
+        font-size: 0.9em;
+    }
+
+
+}
+
+
+.config {
+  height: 150px;
+  input, select.form-control {
+    color: $text-color;
+    font-weight: bold;
+    background: $grey-l;
+  }
+}
+
+.graph>div {
+
+    height:300px;
+
+}
+
+#multiplier {
+  background: $white;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+
+.area {
+  fill: steelblue;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+
+}

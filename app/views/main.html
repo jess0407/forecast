@@ -1,0 +1,52 @@
+<div class="component config row">
+
+  <div class="col-sm-3">
+    <label for="currentDate">Current Date</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="currentDate" ng-model = "today" disabled>
+      <div class="input-group-addon">{{periodicity}}</div>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
+    <label for="forecast">Forecast Period</label>
+    <select id="forecast" ng-model="selectedPeriod"
+ ng-options="p for p in period" class="form-control">
+    </select>
+  </div>
+
+  <div class="col-sm-2">
+    <label for="growth">Growth</label>
+    <select id="growth" ng-model="selectedType"
+ ng-options="type for type in growthTypes" class="form-control">
+    </select>
+  </div>
+
+  <div class="col-sm-2" ng-show="selectedType==='Exponential'">
+    <label for="multiplier">Multiplier</label>
+    <input type="text" class="form-control" id="multiplier" placeholder="ratio">
+  </div>
+
+</div>
+
+<div class="component graph row">
+  <div class="col-sm-2">
+      <p>
+        <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> INPUTS
+      </p>
+      <div class="timeFrame">
+        <label for="timeframe">Timeframe</label>
+        <input type="text" class="form-control" id="timeframe" placeholder="no. of months">
+      </div>
+  </div>
+  <div class="col-sm-3 slider">
+      <label class="rangeLabel">{{range}}</label>
+      <input type="range" ng-model="range" name="points" id="mySlider" min="0" max="100" ng-change="onSlide()" >
+      <label class="low">low</label>
+      <label class="pull-right">high</label>
+  </div>
+
+  <div class="col-sm-7" id="d3">
+
+  </div>
+</div>
